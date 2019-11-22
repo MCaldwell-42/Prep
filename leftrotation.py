@@ -12,4 +12,4 @@ def leftrotation(the_array, times):
 
 array_1 = [1,2,3,4,5]
 
-leftrotation(array_1, 4)
+leftrotation(array_1, 3)
