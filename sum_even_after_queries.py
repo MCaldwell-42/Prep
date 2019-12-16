@@ -22,15 +22,20 @@ def SumAfterQueries(A, Q):
     i=0
     answer = list()
     length = len(Q)
-    while i <= length:
+    while i < length:
         val = Q[i][0]
         index = Q[i][1]
-        next_up = A[index] + val
-        answer.append(next_up)
-
+        A[index] += val
+        equal_sums = 0
+        for number in A:
+            if number % 2 == 0:
+                equal_sums += number
+        answer.append(equal_sums)
+        i+=1
     print(answer)
 
 the_array = [1,2,3,4]
-queries = [[1,0],[-3,1],[-4,0],[2,3]]
-
+queries = [[1,0], [-3,1], [-4,0], [2,3]]
+print(queries)
 SumAfterQueries(the_array, queries)
+
