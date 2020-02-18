@@ -44,5 +44,5 @@ const fibonacci_2 = num => {
       return num
     }
     // recursion here
-    return fibonacci(num - 1) + fibonacci(num - 2)
+    return fibonacci_3(num - 1) + fibonacci_3(num - 2)
   }
